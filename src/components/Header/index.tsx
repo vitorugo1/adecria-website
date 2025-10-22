@@ -4,7 +4,12 @@ import { NavMenu } from '../NavMenu';
 
 export function Header() {
   return (
-    <header className={clsx('flex justify-between items-center min-w-full')}>
+    <header
+      className={clsx(
+        'flex justify-between items-center min-w-full',
+        'shadow-xl sticky top-0',
+      )}
+    >
       <Link
         className={clsx(
           'px-8',

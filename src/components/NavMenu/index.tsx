@@ -3,7 +3,7 @@ import { HandHeart } from 'lucide-react';
 import Link from 'next/link';
 
 export function NavMenu() {
-  const linkClassname = 'px-7';
+  const linkClassname = 'px-3 mx-3';
   return (
     <nav
       className={clsx(
@@ -26,7 +26,7 @@ export function NavMenu() {
       </Link>
       <button
         className={clsx(
-          'flex justify-between text-slate-100 cursor-pointer transition px-6 rounded-2xl',
+          'flex justify-between text-slate-100 cursor-pointer transition px-4 py-2 mx-3 rounded-2xl',
           'bg-slate-600',
           'hover:bg-slate-800',
         )}
