@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Container } from '@/components/Container';
+import { Header } from '@/components/Header';
 
 export const metadata: Metadata = {
   title: 'ADECRIA',
@@ -14,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-BR'>
-      <Container>{children}</Container>
+      <body>
+        <Container>
+          <Header />
+          {children}
+        </Container>
+      </body>
     </html>
   );
 }
