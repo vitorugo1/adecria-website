@@ -7,7 +7,7 @@ export function Header() {
     <header
       className={clsx(
         'flex justify-between items-center min-w-full',
-        'shadow-xl sticky top-0',
+        'shadow-xl bg-slate-100 z-15 sticky top-0',
       )}
     >
       <Link

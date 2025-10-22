@@ -3,46 +3,29 @@ import Image from 'next/image';
 export function Hero() {
   return (
     <>
-      <section className='relative w-full h-[500px] md:h-[600px] lg:h-[700px]'>
-        {/* 2. A IMAGEM DE FUNDO */}
-        {/* Usando Next/Image: 'fill' faz a imagem preencher o pai 'relative'.
-        'object-cover' garante que ela cubra o espaço sem distorcer.
-        'z-0' a coloca no fundo.
-      */}
+      <section className='relative w-full h-[calc(100vh-12rem)]'>
         <Image
-          src='/images/hero-banner-img.jpg' // Troque pelo caminho da sua imagem
+          src='/images/hero-banner-img.jpg'
           alt='Mão de um adulto'
           fill
           className='object-cover'
+          priority
         />
-
-        {/* 3. O CONTAINER DOS BOTÕES */}
-        {/* Aqui está a mágica:
-        - 'absolute': Retira o elemento do fluxo normal.
-        - 'z-10': Coloca ele na frente da imagem (z-0).
-        - 'bottom-12': Posiciona a 12 unidades (48px) da borda inferior. Ajuste a gosto.
-        - 'left-1/2': Move a borda ESQUERDA do container para o meio da tela.
-        - '-translate-x-1/2': Move o container para a ESQUERDA em 50% da SUA PRÓPRIA largura.
-           (O resultado de left-1/2 + -translate-x-1/2 é a centralização perfeita).
-        - 'flex gap-4': Alinha os botões lado a lado com um espaço.
-      */}
-        <div className='absolute z-10 bottom-0 left-1/2 -translate-x-1/2 flex gap-4 md:gap-6'>
-          {/* Seus botões com o estilo que você já criou */}
-          <button className='bg-white text-gray-900 font-semibold py-3 px-6 rounded-full shadow-lg'>
+      </section>
+      <section className=' bg-gray-200 pb-12'>
+        <div className='relative w-full flex justify-center gap-4 -mt-8'>
+          {/* a negative margin '-mt-8' é metade da altura do botão.
+            os botões são'h-16' (4rem / 64px de altura).
+          */}
+          <button className='bg-gray-100 text-gray-800 font-semibold py-4 px-8 rounded-2xl shadow-lg h-16'>
             Apoie
           </button>
 
-          <button className='bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded-full shadow-lg'>
+          <button className='bg-gray-100 text-gray-800 font-semibold py-4 px-8 rounded-2xl shadow-lg h-16'>
             Precisa de ajuda?
           </button>
         </div>
       </section>
-
-      <div className='container mx-auto text-center py-12'>
-        <h2 className='text-2xl font-semibold'>
-          Associação em Defesa das Crianças e Adolescentes do Brasil
-        </h2>
-      </div>
     </>
   );
 }
