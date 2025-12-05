@@ -5,26 +5,15 @@ export function Hero() {
     <>
       <section className='relative w-full h-[calc(100vh-12rem)]'>
         <Image
-          src='/images/hero-banner-img.jpg'
-          alt='Mão de um adulto'
+          src='/images/hero-banner-img.png'
+          alt='Mão de um adulto segurando a de uma criança'
           fill
           className='object-cover'
           priority
         />
       </section>
       <section className='pb-12'>
-        <div className='relative w-full flex justify-center gap-4 -mt-8'>
-          {/* a negative margin '-mt-8' é metade da altura do botão.
-            os botões são'h-16' (4rem / 64px de altura).
-          */}
-          <button className='bg-slate-100 text-gray-800 font-semibold py-4 px-8 rounded-2xl shadow-lg h-16'>
-            Apoie
-          </button>
-
-          <button className='bg-slate-100 text-gray-800 font-semibold py-4 px-8 rounded-2xl shadow-lg h-16'>
-            Precisa de ajuda?
-          </button>
-        </div>
+        <div className='font-'></div>
       </section>
     </>
   );
