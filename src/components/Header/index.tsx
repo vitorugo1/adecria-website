@@ -22,7 +22,7 @@ export function Header() {
       >
         ADECRIA
       </Link>
-      <NavMenu />
+      {/* <NavMenu /> */}
     </header>
   );
 }
