@@ -52,9 +52,19 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <BigButton variant='orange'>Apoiar a ADECRIA</BigButton>
-        <div className={clsx('bg-white/90')}>
+        <div
+          className={clsx(
+            'bg-white/90 flex flex-col gap-4 rounded-2xl p-8 text-left shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]',
+          )}
+        >
+          <h2 className={clsx('font-semibold text-brand-dark')}>
+            Como você pode participar?
+          </h2>
+          <h3 className={clsx('font-regular text-sm text-[#849695]')}>
+            Apoie nosssa causa busque orientação
+          </h3>
           <BigButton variant='orange'>Apoiar a ADECRIA</BigButton>
+          <BigButton variant='white'>Buscar orientação</BigButton>
         </div>
       </section>
     </>
