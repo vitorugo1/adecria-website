@@ -1,5 +1,8 @@
 import clsx from 'clsx';
 import { CenterContainer } from '../CenterContainer';
+import Image from 'next/image';
+import Link from 'next/link';
+import { MoveRight } from 'lucide-react';
 
 export function InfoSection() {
   return (
@@ -70,6 +73,26 @@ export function InfoSection() {
             saudável. Transformamos silêncio em voz. E transformamos dor em
             esperança.
           </p>
+          <button className='bg-[#32859C] text-white shadow-[0_8px_32px_0_rgba(0,0,0,0.2)] text-center flex justify-center items-center p-4 my-4 rounded-[30px]'>
+            <Link href='#'>Conheça como a ADECRIA muda vidas</Link>
+            <MoveRight />
+          </button>
+          <div className='relative w-[312px] h-[380px] rounded-2xl overflow-hidden mx-auto'>
+            <Image
+              src='/images/crianca-chorando.png'
+              alt='Criança chorando enquanto leva as mãos ao rosto'
+              fill
+              className='object-cover md:hidden'
+              priority
+            />
+            <Image
+              src='/images/crianca-chorando.png'
+              alt='Criança chorando enquanto leva as mãos ao rosto'
+              fill
+              className='object-cover hidden md:block'
+              priority
+            />
+          </div>
         </section>
       </CenterContainer>
     </>

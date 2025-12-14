@@ -21,8 +21,8 @@ export function BigButton({ children, variant }: ButtonProps) {
 export function SmallButton({ children, variant }: ButtonProps) {
   const colorClasses =
     variant === 'orange'
-      ? 'bg-[#E59854] text-white font-semibold shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)] hover:bg-[#FDD59C]'
-      : 'bg-white text-[#162A41] font-semibold shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)] hover:bg-gray-100';
+      ? 'bg-[#E59854] text-white text-sm shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)] hover:bg-[#FDD59C]'
+      : 'bg-[#32859C] text-white text-sm shadow-[0_1px_2px_-1px_rgba(0,0,0,0.1),0_1px_3px_0_rgba(0,0,0,0.1)]';
   return (
     <>
       <button
