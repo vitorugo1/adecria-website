@@ -5,21 +5,26 @@ export function InfoSection() {
   return (
     <>
       <CenterContainer>
-        <section className={clsx('flex-col gap-8 items-center text-center')}>
-          <h1 className={clsx('text-2xl font-extrabold mb-4')}>
+        <section
+          className={clsx(
+            'flex-col gap-8 items-center text-center p-8 text-[#162A41]',
+          )}
+        >
+          <h1 className={clsx('font-medium text-xl mb-4')}>
             Associação em Defesa das Crianças e Adolescentes do Brasil
           </h1>
-          <p className={clsx('text-l mb-4')}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-            rutrum bibendum massa, scelerisque maximus orci rutrum vel. Nullam
-            iaculis iaculis ornare. Phasellus venenatis turpis tortor, at tempor
-            elit porttitor quis. Proin eget tempus justo, a cursus quam. Integer
-            sit amet laoreet ligula. In hac habitasse platea dictumst. Vivamus
-            tempor elit ac elit vulputate finibus. Cras sollicitudin porttitor
-            facilisis. Morbi eu sagittis quam. Praesent porttitor turpis eget
-            est sodales condimentum. Sed dictum nulla ante, eu ornare enim
-            porttitor sit amet. Quisque rhoncus neque in sapien ultricies, id
-            luctus ante interdum.
+          <p className={clsx('text-sm mb-4')}>
+            A ADECRIA BRASIL defende, com prioridade constitucional, os direitos
+            de crianças e adolescentes, especialmente filhos de pais separados.
+            Atuamos na prevenção de conflitos, na promoção da guarda
+            compartilhada e no combate à alienação parental, oferecendo
+            orientação jurídica, psicológica e apoio prático às famílias. Também
+            realizamos advocacia social, disseminamos conhecimento sobre leis de
+            proteção e facilitamos acordos de guarda, convivência e questões
+            financeiras, sempre priorizando o bem-estar infantil. Junte-se a
+            essa rede de proteção: seja voluntário, parceiro ou participe de
+            nossos eventos para garantir vínculos familiares saudáveis e justiça
+            para todas as crianças.
           </p>
         </section>
       </CenterContainer>
