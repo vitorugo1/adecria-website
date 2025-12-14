@@ -52,6 +52,7 @@ export function Hero() {
             </div>
           </div>
         </div>
+        <BigButton variant='orange'>Apoiar a ADECRIA</BigButton>
         <div className={clsx('bg-white/90')}>
           <BigButton variant='orange'>Apoiar a ADECRIA</BigButton>
         </div>

@@ -5,8 +5,8 @@ type ButtonProps = {
 export function BigButton({ children, variant }: ButtonProps) {
   const colorClasses =
     variant === 'orange'
-      ? 'bg-brand-orange text-white hover:bg-[#FDD59C]'
-      : 'bg-white text-brand-dark hover:bg-gray-100';
+      ? 'bg-[#E59854] text-white hover:bg-[#FDD59C]'
+      : 'bg-white text-[#162A41] hover:bg-gray-100';
   return (
     <>
       <button
@@ -18,11 +18,15 @@ export function BigButton({ children, variant }: ButtonProps) {
   );
 }
 
-export function SmallButton({ children, color, textcolor }: ButtonProps) {
+export function SmallButton({ children, variant }: ButtonProps) {
+  const colorClasses =
+    variant === 'orange'
+      ? 'bg-[#E59854] text-white hover:bg-[#FDD59C]'
+      : 'bg-white text-[#162A41] hover:bg-gray-100';
   return (
     <>
       <button
-        className={`px-12 py-5 ${color} rounded-2xl text-base text-${textcolor} flex justify-center items-center gap-2`}
+        className={`px-12 py-5 ${colorClasses} rounded-2xl text-base flex justify-center items-center gap-2`}
       >
         {children}
       </button>
