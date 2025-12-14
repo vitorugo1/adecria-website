@@ -1,13 +1,14 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import { BigButton } from '../Buttons';
+import Link from 'next/link';
 
 export function Hero() {
   const p = 'text-white/85 font-normal text-base md:text-xl';
   const h2 = 'font-semibold text-2xl md:text-4xl';
   return (
     <>
-      <section className='relative w-full min-h-screen h-auto flex flex-col items-center justify-center text-center pb-32 overflow-hidden'>
+      <section className='relative w-full min-h-screen h-auto flex flex-col items-center justify-center text-center pb-12 overflow-hidden'>
         <Image
           src='/images/hero-mobile.png'
           alt='Mão de um adulto segurando a de uma criança'
@@ -65,6 +66,12 @@ export function Hero() {
           </h3>
           <BigButton variant='orange'>Apoiar a ADECRIA</BigButton>
           <BigButton variant='white'>Buscar orientação</BigButton>
+          <Link href='#' className='text-center text-sm text-[#32859C]'>
+            Saiba mais sobre nosso trabalho
+          </Link>
+          <p className='border-t border-[#162A411A] text-center text-sm align-baseline pt-4 text-[#849695]'>
+            Atendimento gratuito e humanizado
+          </p>
         </div>
       </section>
     </>
