@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { CenterContainer } from '../CenterContainer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Handshake, MoveRight } from 'lucide-react';
+import { BookOpen, Handshake, Heart, MoveRight, Sprout } from 'lucide-react';
 import { Cards } from '../Cards';
 
 export function InfoSection() {
@@ -95,8 +95,8 @@ export function InfoSection() {
             />
           </div>
         </section>
-        <section className='bg-[#F8FBFB] mt-24 flex flex-col justify-center items-center gap-4 p-4'>
-          <h1 className='text-[#162A41] font-bold text-[28px] text-center mt-16'>
+        <section className='bg-[#F8FBFB] mt-24 py-16 flex flex-col justify-center items-center gap-4 px-4'>
+          <h1 className='text-[#162A41] font-bold text-[28px] text-center'>
             Do conflito ao convívio: como transformamos juntos
           </h1>
           <div className='w-20 h-1 bg-[#32859C] rounded-full mb-2' />
@@ -105,6 +105,24 @@ export function InfoSection() {
             span='ETAPA 1'
             title='ACOLHIMENTO'
             description='Escutamos sem julgar. Aqui, sua dor encontra acolhimento e sua história é validada por profissionais especializados.'
+          />
+          <Cards
+            icon={BookOpen}
+            span='ETAPA 2'
+            title='INFORMAÇÃO'
+            description='Orientamos sobre direitos reais. Você descobre que não precisa entrar em guerra para manter contato com seus filhos.'
+          />
+          <Cards
+            icon={Heart}
+            span='ETAPA 3'
+            title='MEDIAÇÃO'
+            description='Construímos acordos saudáveis. 90% das famílias que chegam a mediação conseguem soluções que priorizam o bem-estar das crianças.'
+          />
+          <Cards
+            icon={Sprout}
+            span='ETAPA 4'
+            title='MULTIPLICAÇÃO'
+            description='Famílias transformadas inspiram outras. Cada história muda a forma como a sociedade enxerga crianças de pais separados.'
           />
         </section>
       </CenterContainer>
