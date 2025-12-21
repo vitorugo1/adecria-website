@@ -2,7 +2,8 @@ import clsx from 'clsx';
 import { CenterContainer } from '../CenterContainer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MoveRight } from 'lucide-react';
+import { Handshake, MoveRight } from 'lucide-react';
+import { Cards } from '../Cards';
 
 export function InfoSection() {
   return (
@@ -93,6 +94,18 @@ export function InfoSection() {
               priority
             />
           </div>
+        </section>
+        <section className='bg-[#F8FBFB] mt-24 flex flex-col justify-center items-center gap-4 p-4'>
+          <h1 className='text-[#162A41] font-bold text-[28px] text-center mt-16'>
+            Do conflito ao convívio: como transformamos juntos
+          </h1>
+          <div className='w-20 h-1 bg-[#32859C] rounded-full mb-2' />
+          <Cards
+            icon={Handshake}
+            span='ETAPA 1'
+            title='ACOLHIMENTO'
+            description='Escutamos sem julgar. Aqui, sua dor encontra acolhimento e sua história é validada por profissionais especializados.'
+          />
         </section>
       </CenterContainer>
     </>
