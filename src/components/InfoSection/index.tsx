@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BookOpen, Handshake, Heart, MoveRight, Sprout } from 'lucide-react';
 import { Cards } from '../Cards';
+import { CardsEmoji } from '../CardEmoji/indext';
+import { QuoteCard } from '../QuoteCard';
 
 export function InfoSection() {
   return (
@@ -124,6 +126,59 @@ export function InfoSection() {
             title='MULTIPLICAÇÃO'
             description='Famílias transformadas inspiram outras. Cada história muda a forma como a sociedade enxerga crianças de pais separados.'
           />
+        </section>
+
+        <section className='bg-[linear-gradient(to_bottom,#FAFCFC,#FFFFFF)] shadow-[5px_11px_22px_0_rgba(0,0,0,0.12)] mt-24 py-16 flex flex-col justify-center items-center gap-4 px-4'>
+          <h1 className='text-[#162A41] font-bold text-[28px] text-center'>
+            Junte-se a uma rede que muda infâncias
+          </h1>
+          <div className='w-20 h-1 bg-[#32859C] rounded-full mb-2' />
+          <p className='text-[15px] text-center text-[#849695]'>
+            Sozinhos, fazemos pouco. Mas juntos, somos uma força que sustenta
+            milhares de crianças. Você não precisa ser especialista — sua
+            contribuição, seja qual for, fortalece a rede que protege quem mais
+            precisa.
+          </p>
+
+          <CardsEmoji
+            title='SER A MUDANÇA'
+            span='Voluntário'
+            description='Sua expertise importa. Psicólogos, advogados, comunicadores — qualquer talento fortalece nossa missão de acolhimento e transformação familiar.'
+            link='Quero contribuir'
+            icon='🤲'
+          />
+          <CardsEmoji
+            title='dar voz'
+            span='Divulgar a Causa'
+            description='Compartilhe nossa história. Cada compartilhamento torna visível a criança invisível. Redes sociais são plataformas de transformação.'
+            link='Compartilhar conteúdo'
+            icon='📢'
+          />
+          <CardsEmoji
+            title='CRESCER JUNTO'
+            span='Participar de Eventos'
+            description='Palestras, workshops, encontros com famílias. Aprenda, conecte-se, inspire-se com quem está na linha de frente dessa mudança.'
+            link='Ver agenda'
+            icon='📚'
+          />
+          <CardsEmoji
+            title='SEMEAR FUTURO'
+            span='Apoio Financeiro'
+            description='Contribuições sustentam atendimento gratuito a famílias vulneráveis. Cada real é uma semente plantada no futuro de uma criança.'
+            link='Contribuir'
+            icon='💚'
+          />
+          <QuoteCard />
+        </section>
+
+        <section
+          className={clsx(
+            'flex-col gap-8 items-center text-center p-8 my-8 text-[#162A41]',
+          )}
+        >
+          <h1 className={clsx('font-normal text-2xl mb-4')}>
+            Empresas parceiras
+          </h1>
         </section>
       </CenterContainer>
     </>
