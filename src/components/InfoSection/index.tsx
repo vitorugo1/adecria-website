@@ -6,6 +6,7 @@ import { BookOpen, Handshake, Heart, MoveRight, Sprout } from 'lucide-react';
 import { Cards } from '../Cards';
 import { CardsEmoji } from '../CardEmoji/indext';
 import { QuoteCard } from '../QuoteCard';
+import { PartnersGrid } from '../PartnersGrid';
 
 export function InfoSection() {
   return (
@@ -171,15 +172,7 @@ export function InfoSection() {
           <QuoteCard />
         </section>
 
-        <section
-          className={clsx(
-            'flex-col gap-8 items-center text-center p-8 my-8 text-[#162A41]',
-          )}
-        >
-          <h1 className={clsx('font-normal text-2xl mb-4')}>
-            Empresas parceiras
-          </h1>
-        </section>
+        <PartnersGrid />
       </CenterContainer>
     </>
   );
