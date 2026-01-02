@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 
 import { Inter } from 'next/font/google';
 import { Montserrat } from 'next/font/google';
+import { Footer } from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'ADECRIA',
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Container>
           <Header />
           {children}
+          <Footer />
         </Container>
       </body>
     </html>
