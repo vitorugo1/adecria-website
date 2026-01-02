@@ -7,6 +7,7 @@ import { Cards } from '../Cards';
 import { CardsEmoji } from '../CardEmoji/indext';
 import { QuoteCard } from '../QuoteCard';
 import { PartnersGrid } from '../PartnersGrid';
+import { NewsletterSection } from '../NewsletterSection';
 
 export function InfoSection() {
   return (
@@ -173,6 +174,8 @@ export function InfoSection() {
         </section>
 
         <PartnersGrid />
+
+        <NewsletterSection />
       </CenterContainer>
     </>
   );
