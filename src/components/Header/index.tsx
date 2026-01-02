@@ -9,12 +9,12 @@ export function Header() {
     <header
       className={clsx(
         'flex justify-between items-center min-w-full',
-        'shadow-xl z-20 sticky top-0',
+        'shadow-xl z-20 sticky top-0 bg-white',
       )}
     >
       <Link
         className={clsx(
-          'px-8',
+          'px-6',
           'text-4xl/normal font-extrabold',
           'sm:text-3xl/normal sm:py-2',
           'md:text-4xl/normal md:py-3',

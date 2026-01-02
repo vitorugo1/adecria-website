@@ -9,7 +9,10 @@ export function MobileMenu() {
 
   return (
     <div className='md:hidden'>
-      <button onClick={() => setIsOpen(true)} className='p-8 text-[#162A41]'>
+      <button
+        onClick={() => setIsOpen(true)}
+        className='py-6 px-8 text-[#162A41]'
+      >
         <Menu size={24} />
       </button>
 
