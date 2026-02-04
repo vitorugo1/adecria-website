@@ -7,9 +7,9 @@ export function NavMenu() {
   return (
     <nav
       className={clsx(
-        'flex justify-between items-center',
+        'hidden md:flex justify-between items-center',
         'px-10',
-        'text-slate-700 text-xl',
+        'text-slate-700',
       )}
     >
       <Link className={clsx(linkClassname, 'font-bold')} href={'#'}>

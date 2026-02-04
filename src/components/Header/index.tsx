@@ -27,10 +27,11 @@ export function Header() {
           alt='Logo da ADECRIA'
           width={193}
           height={58}
-          className='md:hidden object-contain'
+          className='object-contain'
           priority
         />
       </Link>
+      <NavMenu />
       <MobileMenu />
     </header>
   );
