@@ -20,7 +20,7 @@ export function Hero() {
           src='/images/hero-banner-img.png'
           alt='Mão de um adulto segurando a de uma criança'
           fill
-          className='object-cover hidden md:block'
+          className='object-cover -z-10 hidden md:block'
           priority
         />
         <div className='font-bold m-4 text-white p-4 text-3xl md:text-5xl text-center flex flex-col gap-8 font-montserrat'>
