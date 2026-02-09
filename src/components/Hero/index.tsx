@@ -8,7 +8,7 @@ export function Hero() {
   const h2 = 'font-semibold text-2xl md:text-4xl';
   return (
     <>
-      <section className='relative w-full min-h-screen h-auto flex flex-col items-center justify-center text-center pb-12 overflow-hidden'>
+      <section className='relative w-full min-h-screen h-auto flex flex-col md:flex-row items-center justify-center md:justify-between text-center md:text-left pb-12 overflow-hidden px-4 md:px-20 gap-10'>
         <Image
           src='/images/hero-mobile.png'
           alt='Mão de um adulto segurando a de uma criança'
@@ -23,31 +23,38 @@ export function Hero() {
           className='object-cover -z-10 hidden md:block'
           priority
         />
-        <div className='font-bold m-4 text-white p-4 text-3xl md:text-5xl text-center flex flex-col gap-8 font-montserrat'>
-          <h1 className='leading-tight'>Defendendo os direitos</h1>
+        <div className='font-bold text-white p-4 text-3xl md:text-5xl flex flex-col gap-8 font-montserrat md:max-w-2xl items-center md:items-start'>
+          <div>
+            <h1 className='leading-tight'>Defendendo os direitos</h1>
+            <h1 className='leading-tight'>de crianças e adolescentes</h1>
+          </div>
 
-          <h1 className='leading-tight'>de crianças e adolescentes</h1>
-
-          <p className={p}>
+          <p className={`${p}`}>
             A ADECRIA atua em processos de família, combatendo a alienação
             parental, promovendo a guarda compartilhada e oferecendo orientação
             jurídica e psicológica gratuita às famílias.
           </p>
 
           <div
-            className={clsx('w-full max-w-xs border-t border-white/50')}
+            className={clsx(
+              'w-full border-t border-white/50 mx-auto md:mx-0',
+              'max-w-[200px] md:max-w-2xl',
+            )}
           ></div>
 
-          <div className='w-full max-w-xl flex justify-center flex-wrap gap-8'>
-            <div>
+          <div className='w-full max-w-2xl flex justify-center md:justify-start items-start gap-8 md:gap-12'>
+            <div className='whitespace-nowrap'>
+              {' '}
               <h2 className={`${h2}`}>5+ anos</h2>
               <p className={`${p} font-sm`}>de atuação</p>
             </div>
-            <div>
+
+            <div className='whitespace-nowrap'>
               <h2 className={`${h2}`}>Centenas</h2>
               <p className={`${p} font-sm`}>de famílias atendidas</p>
             </div>
-            <div>
+
+            <div className='whitespace-nowrap'>
               <h2 className={`${h2}`}>80-90%</h2>
               <p className={`${p} font-sm`}>acordos em mediação</p>
             </div>
@@ -55,7 +62,7 @@ export function Hero() {
         </div>
         <div
           className={clsx(
-            'bg-white/90 flex flex-col gap-4 rounded-2xl p-8 text-left shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]',
+            'bg-white/90 flex flex-col gap-4 rounded-2xl p-8 text-left shadow-[0_8px_32px_0_rgba(0,0,0,0.2)] w-full max-w-md',
           )}
         >
           <h2 className={clsx('font-semibold text-brand-dark')}>
