@@ -2,7 +2,14 @@ import clsx from 'clsx';
 import { CenterContainer } from '../CenterContainer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BookOpen, Handshake, Heart, MoveRight, Sprout } from 'lucide-react';
+import {
+  ArrowRight,
+  BookOpen,
+  Handshake,
+  Heart,
+  MoveRight,
+  Sprout,
+} from 'lucide-react';
 import { Cards } from '../Cards';
 import { CardsEmoji } from '../CardEmoji/indext';
 import { QuoteCard } from '../QuoteCard';
@@ -36,67 +43,84 @@ export function InfoSection() {
           </p>
         </section>
 
-        <section
-          className={clsx(
-            'shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] m-4 p-8 flex flex-col gap-4 text-left',
-          )}
-        >
-          <h1 className='text-[#162A41] font-bold text-3xl'>
-            Enxergando o invisível
-          </h1>
-          <div className='w-16 h-1 bg-[#32859C] rounded-full mb-2' />
-          <p className='text-[#849695]'>
-            Milhões de crianças no Brasil vivem uma realidade que a sociedade
-            não enxerga. Filhas de pais separados, enfrentam invisibilidade nas
-            políticas públicas, alienação parental e violação de direitos.
-          </p>
-          <p className='text-[#162A41] text-[15px]'>
-            A ADECRIA existe para dar voz a quem não é visto. Por 5 anos,
-            atuamos com pioneirismo defendendo crianças de pais separados —
-            aquelas que, mesmo vivendo em duas casas, merecem crescer com o
-            cuidado e a presença ativa de toda a família.
-          </p>
+        <section className='w-full py-12 px-6 flex justify-center bg-white'>
+          {/* CARD BRANCO GERAL (Container) */}
           <div
-            className={clsx(
-              'bg-[linear-gradient(to_bottom,#CCE7E3,#D4EBE8,#E0F2F0)] border-t-[1.15px] border-[#32859C]/20 shadow-[0_8px_24px_0_rgba(50,133,156,0.15)]',
-              'p-4 my-4',
-              'flex flex-col text-left gap-4 rounded-[20px]',
-            )}
+            className='
+        w-full max-w-[1200px]
+        bg-white
+        rounded-[30px]
+        /* Sombra suave igual do Figma Desktop */
+        shadow-[0_8px_30px_rgba(0,0,0,0.04)]
+        border border-gray-100/50
+        p-6 md:p-12
+        flex flex-col md:flex-row /* Mobile: Coluna | Desktop: Linha */
+        gap-8 md:gap-16
+        items-stretch /* Garante que imagem e texto tenham alturas compatíveis */
+      '
           >
-            <h1 className='font-extrabold text-6xl text-[#32859C]'>80%</h1>
-            <p className='font-semibold text-[#162A41] text-[15px] md:text-lg'>
-              dos filhos de pais separados sofrem algum tipo de violação de
-              direitos.
-            </p>
-            <p className='text-[#849695] text-[15px] md:text-lg'>
-              Cada número é uma infância interrompida. Cada história é uma ponte
-              que podemos construir.
-            </p>
-          </div>
-          <p className='font-semibold text-brand-dark'>
-            Nós transformamos conflitos em oportunidades de convivência
-            saudável. Transformamos silêncio em voz. E transformamos dor em
-            esperança.
-          </p>
-          <button className='bg-[#32859C] text-white shadow-[0_8px_32px_0_rgba(0,0,0,0.2)] text-center flex justify-center items-center p-4 my-4 rounded-[30px]'>
-            <Link href='#'>Conheça como a ADECRIA muda vidas</Link>
-            <MoveRight />
-          </button>
-          <div className='relative w-[312px] h-[380px] rounded-2xl overflow-hidden mx-auto'>
-            <Image
-              src='/images/crianca-chorando.png'
-              alt='Criança chorando enquanto leva as mãos ao rosto'
-              fill
-              className='object-cover md:hidden'
-              priority
-            />
-            <Image
-              src='/images/crianca-chorando.png'
-              alt='Criança chorando enquanto leva as mãos ao rosto'
-              fill
-              className='object-cover hidden md:block'
-              priority
-            />
+            {/* --- COLUNA 1: CONTEÚDO DE TEXTO --- */}
+            <div className='flex flex-col gap-6 md:w-1/2 justify-center'>
+              {/* Título com detalhe da linha */}
+              <div className='space-y-2'>
+                <h2 className='text-[#162A41] text-3xl md:text-4xl font-bold'>
+                  Enxergando o invisível
+                </h2>
+                <div className='w-16 h-1 bg-[#32859C] rounded-full'></div>
+              </div>
+
+              {/* Parágrafos */}
+              <div className='text-[#849695] text-base leading-relaxed space-y-4'>
+                <p>
+                  Milhões de crianças no Brasil vivem uma realidade que a
+                  sociedade não enxerga. Filhas de pais separados, enfrentam
+                  invisibilidade nas políticas públicas, alienação parental e
+                  violação de direitos.
+                </p>
+                <p>
+                  A ADECRIA existe para dar voz a quem não é visto. Por 5 anos,
+                  atuamos com pioneirismo defendendo crianças de pais separados
+                  — aquelas que, mesmo vivendo em duas casas, merecem crescer
+                  com o cuidado e a presença ativa de toda a família.
+                </p>
+              </div>
+
+              {/* Card Verde (Estatística) */}
+              <div className='bg-[#E0F2F0] p-6 rounded-2xl border-l-4 border-[#32859C]'>
+                <h3 className='text-[#32859C] text-5xl font-bold mb-2'>80%</h3>
+                <p className='text-[#162A41] font-bold text-sm md:text-base mb-2'>
+                  dos filhos de pais separados sofrem algum tipo de violação de
+                  direitos.
+                </p>
+                <p className='text-[#849695] text-sm'>
+                  Cada número é uma infância interrompida. Cada história é uma
+                  ponte que podemos construir.
+                </p>
+              </div>
+
+              {/* Texto final */}
+              <p className='text-[#162A41] font-semibold text-sm md:text-base'>
+                Nós transformamos conflitos em oportunidades de convivência
+                saudável. Transformamos silêncio em voz. E transformamos dor em
+                esperança.
+              </p>
+
+              {/* Botão */}
+              <button className='w-full bg-[#32859C] text-white font-bold py-4 rounded-full shadow-lg hover:brightness-105 transition-all flex items-center justify-center gap-2'>
+                Conheça como a ADECRIA muda vidas
+                <ArrowRight size={20} />
+              </button>
+            </div>
+            <div className='relative md:w-1/2 min-h-[300px] md:min-h-[500px]'>
+              <div className='relative w-full h-full overflow-hidden rounded-[20px]'>
+                <Image
+                  src='/images/crianca-chorando.png'
+                  alt='Criança sentada cobrindo o rosto'
+                  fill
+                  className='object-cover'
+                />
+              </div>
+            </div>
           </div>
         </section>
         <section className='bg-[#F8FBFB] mt-24 py-16 flex flex-col justify-center items-center gap-4 px-4'>
