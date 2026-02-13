@@ -11,23 +11,43 @@ type CardsProps = {
 export function Cards({ icon: Icon, title, description, span }: CardsProps) {
   return (
     <>
-      <div className='m-4 flex flex-col items-start gap-4 bg-white rounded-[28px] p-8 shadow-[0_6px_20px_0_rgba(0,0,0,0.08)]'>
-        <div className='w-16 h-16 bg-[#32859C] rounded-[20px] shadow-[0_4px_12px_0_rgba(50,133,156,0.3)] flex items-center justify-center text-white mb-2'>
-          <Icon size={32} />
+      <div
+        className='
+        h-full
+        flex flex-col items-start
+        bg-white rounded-[20px]
+        p-6
+        shadow-[0_8px_24px_rgba(0,0,0,0.08)]
+        relative z-10
+      '
+      >
+        {/* ÍCONE */}
+        <div
+          className='
+        w-14 h-14
+        bg-[#32859C]
+        rounded-[16px]
+        shadow-[0_4px_12px_0_rgba(50,133,156,0.3)]
+        flex items-center justify-center
+        text-white
+        mb-4
+      '
+        >
+          <Icon size={28} />
         </div>
-        <div className='flex flex-col gap-2'>
-          <span className='text-[#32859C] font-bold text-sm tracking-wider uppercase'>
-            {span}
-          </span>
 
-          <h3 className='text-[#162A41] font-bold text-xl uppercase'>
-            {title}
-          </h3>
+        {/* ETAPA */}
+        <span className='text-[#32859C] font-bold text-xs tracking-wider uppercase mb-2 block'>
+          {span}
+        </span>
 
-          <p className='text-[#849695] text-sm leading-relaxed'>
-            {description}
-          </p>
-        </div>
+        {/* TÍTULO */}
+        <h3 className='text-[#162A41] font-bold text-lg uppercase mb-3 leading-tight'>
+          {title}
+        </h3>
+
+        {/* DESCRIÇÃO */}
+        <p className='text-[#849695] text-sm leading-relaxed'>{description}</p>
       </div>
     </>
   );

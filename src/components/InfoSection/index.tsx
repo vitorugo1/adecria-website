@@ -42,26 +42,21 @@ export function InfoSection() {
             para todas as crianças.
           </p>
         </section>
-
+        {/*Criança chorando */}
         <section className='w-full py-12 px-6 flex justify-center bg-white'>
-          {/* CARD BRANCO GERAL (Container) */}
           <div
             className='
         w-full max-w-[1200px]
         bg-white
         rounded-[30px]
-        /* Sombra suave igual do Figma Desktop */
         shadow-[0_8px_30px_rgba(0,0,0,0.04)]
         border border-gray-100/50
         p-6 md:p-12
-        flex flex-col md:flex-row /* Mobile: Coluna | Desktop: Linha */
+        flex flex-col md:flex-row
         gap-8 md:gap-16
-        items-stretch /* Garante que imagem e texto tenham alturas compatíveis */
       '
           >
-            {/* --- COLUNA 1: CONTEÚDO DE TEXTO --- */}
-            <div className='flex flex-col gap-6 md:w-1/2 justify-center'>
-              {/* Título com detalhe da linha */}
+            <div className='flex flex-col gap-6 md:w-1/2'>
               <div className='space-y-2'>
                 <h2 className='text-[#162A41] text-3xl md:text-4xl font-bold'>
                   Enxergando o invisível
@@ -69,7 +64,6 @@ export function InfoSection() {
                 <div className='w-16 h-1 bg-[#32859C] rounded-full'></div>
               </div>
 
-              {/* Parágrafos */}
               <div className='text-[#849695] text-base leading-relaxed space-y-4'>
                 <p>
                   Milhões de crianças no Brasil vivem uma realidade que a
@@ -85,7 +79,6 @@ export function InfoSection() {
                 </p>
               </div>
 
-              {/* Card Verde (Estatística) */}
               <div className='bg-[#E0F2F0] p-6 rounded-2xl border-l-4 border-[#32859C]'>
                 <h3 className='text-[#32859C] text-5xl font-bold mb-2'>80%</h3>
                 <p className='text-[#162A41] font-bold text-sm md:text-base mb-2'>
@@ -97,22 +90,10 @@ export function InfoSection() {
                   ponte que podemos construir.
                 </p>
               </div>
-
-              {/* Texto final */}
-              <p className='text-[#162A41] font-semibold text-sm md:text-base'>
-                Nós transformamos conflitos em oportunidades de convivência
-                saudável. Transformamos silêncio em voz. E transformamos dor em
-                esperança.
-              </p>
-
-              {/* Botão */}
-              <button className='w-full bg-[#32859C] text-white font-bold py-4 rounded-full shadow-lg hover:brightness-105 transition-all flex items-center justify-center gap-2'>
-                Conheça como a ADECRIA muda vidas
-                <ArrowRight size={20} />
-              </button>
             </div>
-            <div className='relative md:w-1/2 min-h-[300px] md:min-h-[500px]'>
-              <div className='relative w-full h-full overflow-hidden rounded-[20px]'>
+
+            <div className='flex flex-col gap-6 md:w-1/2'>
+              <div className='relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-[20px]'>
                 <Image
                   src='/images/crianca-chorando.png'
                   alt='Criança sentada cobrindo o rosto'
@@ -120,38 +101,90 @@ export function InfoSection() {
                   className='object-cover'
                 />
               </div>
+
+              <p className='text-[#162A41] font-semibold text-sm md:text-base'>
+                Nós transformamos conflitos em oportunidades de convivência
+                saudável. Transformamos silêncio em voz. E transformamos dor em
+                esperança.
+              </p>
+
+              <button className='w-full bg-[#32859C] text-white font-bold py-4 rounded-full shadow-lg hover:brightness-105 transition-all flex items-center justify-center gap-2'>
+                Conheça como a ADECRIA muda vidas
+                <ArrowRight size={20} />
+              </button>
             </div>
           </div>
         </section>
-        <section className='bg-[#F8FBFB] mt-24 py-16 flex flex-col justify-center items-center gap-4 px-4'>
-          <h1 className='text-[#162A41] font-bold text-[28px] text-center'>
-            Do conflito ao convívio: como transformamos juntos
-          </h1>
-          <div className='w-20 h-1 bg-[#32859C] rounded-full mb-2' />
-          <Cards
-            icon={Handshake}
-            span='ETAPA 1'
-            title='ACOLHIMENTO'
-            description='Escutamos sem julgar. Aqui, sua dor encontra acolhimento e sua história é validada por profissionais especializados.'
+        <section className='relative py-20 mt-12 mb-12 isolate'>
+          {/* --- HACK DO FUNDO INFINITO ---
+          Isso cria uma camada cinza que ocupa a tela inteira (w-screen),
+          mas fica centralizada atrás do conteúdo, sem esticar os cards.
+      */}
+          <div
+            className='
+          absolute top-0 bottom-0
+          bg-[#F8FBFB]
+          w-screen
+          left-1/2 -translate-x-1/2
+          -z-10
+        '
           />
-          <Cards
-            icon={BookOpen}
-            span='ETAPA 2'
-            title='INFORMAÇÃO'
-            description='Orientamos sobre direitos reais. Você descobre que não precisa entrar em guerra para manter contato com seus filhos.'
-          />
-          <Cards
-            icon={Heart}
-            span='ETAPA 3'
-            title='MEDIAÇÃO'
-            description='Construímos acordos saudáveis. 90% das famílias que chegam a mediação conseguem soluções que priorizam o bem-estar das crianças.'
-          />
-          <Cards
-            icon={Sprout}
-            span='ETAPA 4'
-            title='MULTIPLICAÇÃO'
-            description='Famílias transformadas inspiram outras. Cada história muda a forma como a sociedade enxerga crianças de pais separados.'
-          />
+
+          {/* --- CONTEÚDO TRAVADO (Max Width 1024px) ---
+          Reduzi para 1024px para os cards ficarem mais parecidos com o gabarito (retangulares verticais)
+      */}
+          <div className='w-full max-w-[1024px] mx-auto px-6 relative'>
+            {/* CABEÇALHO */}
+            <div className='flex flex-col items-center gap-4 text-center mb-16'>
+              <h1 className='text-[#162A41] font-bold text-[28px] md:text-4xl leading-tight'>
+                Do conflito ao convívio: como transformamos juntos
+              </h1>
+              <div className='w-20 h-1 bg-[#32859C] rounded-full' />
+            </div>
+
+            {/* ÁREA DOS CARDS */}
+            <div className='w-full relative'>
+              {/* LINHA CONECTORA AZUL
+              top-9 (36px): Ajustado para passar no meio do ícone
+              h-[4px]: Mais grossa
+          */}
+              <div className='hidden md:block absolute top-9 left-10 right-10 h-[4px] bg-[#32859C]/30 -z-0 rounded-full'></div>
+
+              {/* GRID
+              gap-8: Mais espaço entre os cards
+              items-stretch: Força mesma altura
+          */}
+              <div className='grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 items-stretch relative z-10'>
+                <Cards
+                  icon={Handshake}
+                  span='ETAPA 1'
+                  title='ACOLHIMENTO'
+                  description='Escutamos sem julgar. Aqui, sua dor encontra acolhimento e sua história é validada por profissionais especializados.'
+                />
+
+                <Cards
+                  icon={BookOpen}
+                  span='ETAPA 2'
+                  title='INFORMAÇÃO'
+                  description='Orientamos sobre direitos reais. Você descobre que não precisa entrar em guerra para manter contato com seus filhos.'
+                />
+
+                <Cards
+                  icon={Heart}
+                  span='ETAPA 3'
+                  title='MEDIAÇÃO'
+                  description='Construímos acordos saudáveis. 90% das famílias que chegam a mediação conseguem soluções que priorizam o bem-estar das crianças.'
+                />
+
+                <Cards
+                  icon={Sprout}
+                  span='ETAPA 4'
+                  title='MULTIPLICAÇÃO'
+                  description='Famílias transformadas inspiram outras. Cada história muda a forma como a sociedade enxerga crianças de pais separados.'
+                />
+              </div>
+            </div>
+          </div>
         </section>
 
         <section className='bg-[linear-gradient(to_bottom,#FAFCFC,#FFFFFF)] shadow-[5px_11px_22px_0_rgba(0,0,0,0.12)] mt-24 py-16 flex flex-col justify-center items-center gap-4 px-4'>

@@ -5,5 +5,5 @@ export function CenterContainer({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div className={clsx('max-w-4xl mx-auto')}>{children}</div>;
+  return <div className={clsx('max-w-5xl mx-auto')}>{children}</div>;
 }
