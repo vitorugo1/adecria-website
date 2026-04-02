@@ -4,7 +4,10 @@ import Link from 'next/link';
 export function Hero() {
   return (
     // Removido o min-h-screen e adicionado py-20 para o desktop
-    <section className='relative w-full flex items-center justify-center pt-[140px] pb-20 md:pt-[180px] md:pb-[120px] overflow-hidden'>
+    <section
+      id='heroInicio'
+      className='scroll-mt-32 relative w-full flex items-center justify-center pt-[140px] pb-20 md:pt-[180px] md:pb-[120px] overflow-hidden'
+    >
       {' '}
       {/* IMAGENS DE FUNDO */}
       <Image
@@ -84,17 +87,26 @@ export function Hero() {
           </div>
 
           <div className='flex flex-col gap-3 mt-4'>
-            <button className='w-full bg-[#E59854] text-white font-bold py-3.5 lg:py-4 rounded-full shadow-md hover:brightness-105 transition-all text-sm lg:text-base'>
+            <Link
+              href='#doacoes'
+              // Adicionado: flex justify-center items-center text-center
+              className='w-full bg-[#E59854] text-white font-bold py-3.5 lg:py-4 rounded-full shadow-md hover:brightness-105 transition-all text-sm lg:text-base flex justify-center items-center text-center'
+            >
               Apoiar a ADECRIA
-            </button>
-            <button className='w-full bg-white border-2 border-[#E5E7EB] text-[#162A41] font-bold py-3.5 lg:py-4 rounded-full hover:bg-gray-50 transition-all text-sm lg:text-base'>
+            </Link>
+
+            <Link
+              href='#footer'
+              // Adicionado: flex justify-center items-center text-center
+              className='w-full bg-white border-2 border-[#E5E7EB] text-[#162A41] font-bold py-3.5 lg:py-4 rounded-full hover:bg-gray-50 transition-all text-sm lg:text-base flex justify-center items-center text-center'
+            >
               Buscar orientação
-            </button>
+            </Link>
           </div>
 
           <div className='mt-2 flex flex-col gap-4'>
             <Link
-              href='#'
+              href='#infoSection'
               className='text-center text-[13px] lg:text-sm text-[#32859C] font-semibold hover:underline'
             >
               Saiba mais sobre nosso trabalho

@@ -13,16 +13,15 @@ import {
 import { Cards } from '../Cards';
 import { CardsEmoji } from '../CardEmoji/indext';
 import { QuoteCard } from '../QuoteCard';
-import { PartnersGrid } from '../PartnersGrid';
-import { NewsletterSection } from '../NewsletterSection';
 
 export function InfoSection() {
   return (
     <>
       <CenterContainer>
         <section
+          id='infoSection'
           className={clsx(
-            'flex-col gap-8 items-center text-center p-8 my-8 text-[#162A41]',
+            'scroll-mt-32 flex-col gap-8 items-center text-center p-8 my-8 text-[#162A41]',
           )}
         >
           <h1 className={clsx('font-medium text-xl mb-4')}>
@@ -107,11 +106,6 @@ export function InfoSection() {
                 saudável. Transformamos silêncio em voz. E transformamos dor em
                 esperança.
               </p>
-
-              <button className='w-full bg-[#32859C] text-white font-bold py-4 rounded-full shadow-lg hover:brightness-105 transition-all flex items-center justify-center gap-2'>
-                Conheça como a ADECRIA muda vidas
-                <ArrowRight size={20} />
-              </button>
             </div>
           </div>
         </section>
@@ -203,36 +197,28 @@ export function InfoSection() {
             title='SER A MUDANÇA'
             span='Voluntário'
             description='Sua expertise importa. Psicólogos, advogados, comunicadores — qualquer talento fortalece nossa missão de acolhimento e transformação familiar.'
-            link='Quero contribuir'
             icon='🤲'
           />
           <CardsEmoji
             title='dar voz'
             span='Divulgar a Causa'
             description='Compartilhe nossa história. Cada compartilhamento torna visível a criança invisível. Redes sociais são plataformas de transformação.'
-            link='Compartilhar conteúdo'
             icon='📢'
           />
           <CardsEmoji
             title='CRESCER JUNTO'
             span='Participar de Eventos'
             description='Palestras, workshops, encontros com famílias. Aprenda, conecte-se, inspire-se com quem está na linha de frente dessa mudança.'
-            link='Ver agenda'
             icon='📚'
           />
           <CardsEmoji
             title='SEMEAR FUTURO'
             span='Apoio Financeiro'
             description='Contribuições sustentam atendimento gratuito a famílias vulneráveis. Cada real é uma semente plantada no futuro de uma criança.'
-            link='Contribuir'
             icon='💚'
           />
           <QuoteCard />
         </section>
-
-        <PartnersGrid />
-
-        <NewsletterSection />
       </CenterContainer>
     </>
   );

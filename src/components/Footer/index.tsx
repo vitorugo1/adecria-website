@@ -3,7 +3,10 @@ import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className='w-full bg-white py-12 px-6 flex justify-center'>
+    <footer
+      id='footer'
+      className='scroll-mt-32 w-full bg-white py-12 px-6 flex justify-center'
+    >
       {/* Container centralizador para alinhar com o resto do site */}
       <div className='w-full max-w-[1240px] flex flex-col gap-16'>
         {/* CONTEÚDO PRINCIPAL (Logo e Contatos) */}
@@ -28,9 +31,8 @@ export function Footer() {
             <div className='flex flex-col gap-4'>
               <h3 className='text-[#162A41] font-bold'>Fale Conosco</h3>
               <div className='flex flex-col gap-2 text-[#162A41] text-base'>
-                <p>(00) 000-000-000</p>
-                <p>emailassociacao@email.com</p>
-                <p>Endereço se vier ao caso</p>
+                <p>(+55) 17 98125-7131</p>
+                <p>contato@adecria.ong.br</p>
               </div>
             </div>
 
@@ -39,16 +41,12 @@ export function Footer() {
               <h3 className='text-[#162A41] font-bold'>Redes sociais</h3>
               <div className='flex flex-col gap-2 text-[#162A41] text-base'>
                 <Link
-                  href='#'
+                  href='https://www.instagram.com/adecriabrasil/'
                   className='hover:text-[#32859C] transition-colors'
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   Instagram
-                </Link>
-                <Link
-                  href='#'
-                  className='hover:text-[#32859C] transition-colors'
-                >
-                  Facebook
                 </Link>
               </div>
             </div>

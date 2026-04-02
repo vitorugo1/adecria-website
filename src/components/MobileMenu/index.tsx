@@ -52,42 +52,28 @@ export function MobileMenu() {
         <nav className='flex flex-col gap-6'>
           {/* Active Item example*/}
           <Link
-            href='#'
+            href='#heroInicio'
             className='bg-[#D4EBF7] text-[#162A41] font-semibold text-base p-4 rounded-[10px] block'
           >
             Início
           </Link>
 
           <Link
-            href='#'
+            href='#infoSection'
             className='text-[#4a4a4a] font-medium text-base p-4 hover:bg-gray-50 rounded-[10px] block transition-colors'
           >
             Saiba mais
           </Link>
 
           <Link
-            href='#'
-            className='text-[#849695] font-medium text-base p-4 hover:bg-gray-50 rounded-[10px] block transition-colors'
-          >
-            Faça parte
-          </Link>
-
-          <Link
-            href='#'
+            href='#footer'
             className='text-[#849695] font-medium text-base p-4 hover:bg-gray-50 rounded-[10px] block transition-colors'
           >
             Contato
           </Link>
-
-          <Link
-            href='#'
-            className='text-[#849695] font-medium text-base p-4 hover:bg-gray-50 rounded-[10px] block transition-colors'
-          >
-            Postagens
-          </Link>
         </nav>
 
-        <div className='mt-auto pt-8 border-t border-gray-100'>
+        <Link href='#doacoes' className='mt-auto pt-8 border-t border-gray-100'>
           <button
             className='
     flex items-center gap-2
@@ -105,7 +91,7 @@ export function MobileMenu() {
             Doações
             <HandHeart size={20} />
           </button>
-        </div>
+        </Link>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ type CardsEmoProps = {
   span: string;
   title: string;
   description: string;
-  link: string;
+  link?: string;
 };
 
 export function CardsEmoji({
@@ -40,7 +40,7 @@ export function CardsEmoji({
             href='#'
             className='text-[#32859C] text-semibold text-[15px] flex gap-2'
           >
-            {link} <MoveRight />
+            {link}
           </Link>
         </div>
       </div>

@@ -12,29 +12,28 @@ export function NavMenu() {
         'text-slate-700',
       )}
     >
-      <Link className={clsx(linkClassname, 'font-bold')} href={'#'}>
+      <Link className={clsx(linkClassname, 'font-bold')} href='#heroInicio'>
         Início
       </Link>
-      <Link className={linkClassname} href={'#'}>
+      <Link className={linkClassname} href='#infoSection'>
         Saiba mais
       </Link>
-      <Link className={linkClassname} href={'#'}>
-        Faça parte
-      </Link>
-      <Link className={clsx(linkClassname)} href={'#'}>
+
+      <Link href='#footer' className={clsx(linkClassname)}>
         Contato
       </Link>
-      <button
+      <Link
+        href='#doacoes'
         className={clsx(
-          'flex justify-between text-slate-100 cursor-pointer transition px-4 py-2 mx-3 rounded-2xl',
-          'bg-slate-600',
+          'flex justify-between text-white cursor-pointer transition px-4 py-2 mx-3 rounded-2xl',
+          'bg-[#E59854]',
           'hover:bg-slate-800',
         )}
         aria-label='Doações'
         title='Doações'
       >
         Doações <HandHeart />
-      </button>
+      </Link>
     </nav>
   );
 }
