@@ -1,5 +1,3 @@
-import { ComponentType } from 'react';
-import { Icon, LucideProps, MoveRight } from 'lucide-react';
 import Link from 'next/link';
 
 type CardsEmoProps = {
